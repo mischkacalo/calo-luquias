@@ -12,23 +12,59 @@
 <body>
     <header>
         <h1>Meya's Vogue : Tasks</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="dressing-room.html">Dressing Room</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="tasks.html">Tasks</a>
+        <!-- Hamburger Menu Button (Left-aligned) -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Navigation Menu -->
+         <nav id="nav-menu">
+            <a href="index.html">Home 🏠</a>
+            <a href="dressing-room.html">Dressing Room 👗</a>
+            <a href="gallery.html">Gallery 🖼️</a>
+            <a href="tasks.html">Tasks 📝</a>
+            <a href="about-us.html">About Us ℹ️</a>
         </nav>
     </header>
 
-    <section>
-        <h2>Fashion Challenges</h2>
-        <p>The Tasks page gives users fun fashion challenges to complete. These challenges might ask players to create a specific type of look. These tasks keep the game interesting by encouraging users to try new ideas and experiment with different outfits.</p>
+   <!-- Sidebar with music button, volume control, and image -->
+    <audio id="bg-music" autoplay loop controls>
+        <source src="https://cdn.glitch.me/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bgmusic?v=1738475336347" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>Fashion Challenges ⋆˚✿˖°</h2>
+
+    <section class="task-container">
+        <div class="carousel-container">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="carousel">
+                <img src="https://cdn.glitch.global/0456252c-3447-4e70-9f2c-bdae30c4cfa2/herro.jpeg?v=1738334769943" class="carousel-slide" alt="Fashion Challenge 1">
+                <img src="https://cdn.glitch.global/0456252c-3447-4e70-9f2c-bdae30c4cfa2/dylhitm.jpeg?v=1738334770504" class="carousel-slide" alt="Fashion Challenge 2">
+                <img src="https://cdn.glitch.global/0456252c-3447-4e70-9f2c-bdae30c4cfa2/bb.jpeg?v=1738334773154" class="carousel-slide" alt="Fashion Challenge 3">
+                <img src="https://cdn.glitch.global/0456252c-3447-4e70-9f2c-bdae30c4cfa2/A.jpeg?v=1738334926933" class="carousel-slide" alt="Fashion Challenge 4">
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
         
-        <p>There are also daily tasks that users can complete each day. These tasks encourage players to come back to the game and keep trying new fashion styles. Completing these tasks can unlock rewards or new content, making the game more fun and giving users new goals to aim for every day.</p>
-        
-        <div id="task"></div>
-        <button onclick="generateTask()">Get New Task</button>
+        <div class="task-box">
+            <h2>Fashion Challenge</h2>
+            <p id="task">Click the button to get a new task!</p>
+            <button onclick="generateTask()">Get New Task</button>
+            <button id="taskButton" onclick="completeTask()">Complete Task</button>
+        </div>
     </section>
+
+    <div class="task-info">
+        <p>The Tasks page gives users fun fashion challenges to complete. These challenges might ask players to create a specific type of look. These tasks keep the game interesting by encouraging users to try new ideas and experiment with different outfits.</p>
+        <p>There are also daily tasks that users can complete each day. These tasks encourage players to come back to the game and keep trying new fashion styles. Completing these tasks can unlock rewards or new content, making the game more fun and giving users new goals to aim for every day.</p>
+    </div>
+
+    <!-- Pop-up modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupText">Great job! Task complete!</p>
+            <button id="closePopup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Meya's Vogue. All rights reserved.</p>
