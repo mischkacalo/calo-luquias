@@ -12,34 +12,46 @@
 <body>
     <header>
         <h1>Welcome to Meya's Vogue!</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="dressing-room.html">Dressing Room</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="tasks.html">Tasks</a>
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+        <nav id="nav-menu">
+            <a href="index.html">Home 🏠</a>
+            <a href="dressing-room.html">Dressing Room 👗</a>
+            <a href="gallery.html">Gallery 🖼️</a>
+            <a href="tasks.html">Tasks 📝</a>
+            <a href="about-us.html">About Us ℹ️</a>
         </nav>
     </header>
+
+    <!-- Sidebar with music button, volume control, and image -->
+    <audio id="bg-music" autoplay loop controls>
+        <source src="https://cdn.glitch.me/d1e2f013-a2e0-47ca-811d-9d9bbb50077b/bgmusic?v=1738475336347" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
 
     <section>
         <h2>Start Your Fashion Journey! ˚ʚ♡ɞ˚</h2>
         <p>Meya's Vogue is a fun dress-up game where you can create stylish outfits for a virtual model. Choose clothing items like tops, bottoms, and accessories to mix and match until you find the perfect look! You can experiment with different styles and create unique combinations that express your fashion sense.</p>
         <p>When you're done, head over to the gallery to save and share your creations with others. It's a great place to showcase your personal style and get inspiration from others. Ready to start creating? Let the fashion fun begin!</p>
     </section>
-<footer>
-    <p><strong>Disclaimer .ᐟ :</strong></p>
-    <p>
-        All rights of the images and designs used in this project belong to 
-        <strong>NEVIL Company</strong> or the creators of the app <em>MyLittleStar</em>. 
-        These assets are only used for educational and non-commercial purposes.
-    </p>
-    <p><strong>References:</strong></p>
-    <p>
-        NEVIL Company. (2019). <em>MyLittleStar</em> (Version 1.0.8) [Mobile App]. App Store. 
-      "https://apps.apple.com/us/app/mylittlestar/id1455377164". </p>
- 
 
-  </footer>
+    <footer>
+        <p><strong>Disclaimer .ᐟ :</strong></p>
+        <p>
+            All rights of the images and designs used in this project belong to 
+            <strong>NEVIL Company</strong> or the creators of the app <em>MyLittleStar</em>. 
+            These assets are only used for educational and non-commercial purposes.
+        </p>
+        <p><strong>References:</strong></p>
+        <p>
+            NEVIL Company. (2019). <em>MyLittleStar</em> (Version 1.0.8) [Mobile App]. App Store. 
+            <a href="https://apps.apple.com/us/app/mylittlestar/id1455377164" target="_blank">App Link</a>
+        </p>
+    </footer>
 
+    <!-- Link to external JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
